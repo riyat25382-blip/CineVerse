@@ -1,14 +1,18 @@
-CineVerse — Entertainment Discovery App
+CineVerse — 
+
+Entertainment Discovery App
 A responsive web application for discovering, searching, and saving Movies, TV Shows, Web Series, and Anime using real-time data from The Movie Database (TMDB) API.
 
 ---
 
 Purpose:-
+
 CineVerse lets users explore a vast entertainment library like browse Movies, TV Shows, Web Series, and Anime all in one place. Users can search by title, filter by genre or year, sort by popularity or rating, save personal favorites, and watch official trailers. It demonstrates practical JavaScript skills including API integration, array Higher-Order Functions, and dynamic UI rendering.
 
 ---
 
 API Used:-
+
 The Movie Database (TMDB) API
 Base URL: https://api.themoviedb.org/3
 Docs: https://developer.themoviedb.org/docs
@@ -25,6 +29,7 @@ GET /movie/{id}/videos — fetch official trailers => from YouTube
 ---
 
 Planned Features:-
+
 Content Tabs — Switch between Movies, TV Shows, Anime and Trending (all in one app)
 Search — Search across movies and TV shows using a debounced input (Array filter)
 Filter — Filter results by genre, release year, and minimum rating (Array filter)
@@ -41,6 +46,7 @@ Pagination — Navigate through multiple pages of results
 ---
 
 Technologies:-
+
 HTML5 — Semantic structure
 CSS3 — Custom styling, Flexbox/Grid, responsive design
 JavaScript (ES6+) — Fetch API, DOM manipulation, HOFs, localStorage
@@ -50,6 +56,7 @@ Pure vanilla JS.
 ---
 
 Deployment:-
+
 Will be deployed via GitHub before the final deadline.
 
 ---
@@ -71,5 +78,6 @@ cineverse/
 ---
 
 Author:-
+
 Riya Todi
 https://github.com/riyat25382-blip
