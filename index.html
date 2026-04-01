@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineVerse — Discover Everything</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <!-- Cinematic grain overlay -->
+  <div class="grain"></div>
+ 
+  <!-- Spotlight cursor effect -->
+  <div class="spotlight" id="spotlight"></div>
+ 
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">CINE<em>VERSE</em></span>
+    </div>
+ 
+    <div class="nav-tabs">
+      <button class="tab-btn active" data-type="trending"> Trending</button>
+      <button class="tab-btn" data-type="movie"> Movies</button>
+      <button class="tab-btn" data-type="tv"> TV Shows</button>
+      <button class="tab-btn" data-type="anime"> Anime</button>
+      <button class="tab-btn" data-type="favorites"> Favorites</button>
+    </div>
+ 
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <span class="theme-icon">☀</span>
+      </button>
+    </div>
+  </nav>
+ 
+  <!-- ═══════════════ HERO SEARCH ═══════════════ -->
+  <header class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Your universe of entertainment</p>
+      <h1 class="hero-title">What will you<br /><em>discover</em> today?</h1>
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Search movies, shows, anime..."
+          autocomplete="off"
+        />
+        <span class="search-clear" id="searchClear">✕</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">scroll to explore ↓</div>
+  </header>
+ 
+  <!-- ═══════════════ FILTERS BAR ═══════════════ -->
+  <section class="filters-bar">
+    <div class="filters-left">
+      <div class="filter-group">
+        <label>Genre</label>
+        <select id="genreFilter">
+          <option value="">All Genres</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Year</label>
+        <select id="yearFilter">
+          <option value="">All Years</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Min Rating</label>
+        <select id="ratingFilter">
+          <option value="">Any</option>
+          <option value="9">9+</option>
+          <option value="8">8+</option>
+          <option value="7">7+</option>
+          <option value="6">6+</option>
+        </select>
+      </div>
+    </div>
+    <div class="filters-right">
+      <div class="filter-group">
+        <label>Sort by</label>
+        <select id="sortFilter">
+          <option value="popularity">Popularity</option>
+          <option value="rating">Rating</option>
+          <option value="date_desc">Newest First</option>
+          <option value="date_asc">Oldest First</option>
+          <option value="title_asc">A → Z</option>
+          <option value="title_desc">Z → A</option>
+        </select>
+      </div>
+      <button class="reset-btn" id="resetFilters">Reset</button>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════ RESULTS COUNT ═══════════════ -->
+  <div class="results-meta" id="resultsMeta">
+    <span id="resultsCount"></span>
+    <span id="activeCategory"></span>
+  </div>
+ 
+  <!-- ═══════════════ MAIN GRID ═══════════════ -->
+  <main class="content-grid" id="contentGrid">
+    <!-- Cards injected by JS -->
+  </main>
+ 
+  <!-- Loading State -->
+  <div class="loader" id="loader">
+    <div class="film-reel">
+      <div class="reel-hole"></div>
+      <div class="reel-hole"></div>
+      <div class="reel-hole"></div>
+    </div>
+    <p>Loading the universe...</p>
+  </div>
+ 
+  <!-- Empty State -->
+  <div class="empty-state" id="emptyState" style="display:none">
+    <div class="empty-icon">🎭</div>
+    <h3>Nothing found</h3>
+    <p>Try adjusting your search or filters</p>
+  </div>
+ 
+  <!-- ═══════════════ PAGINATION ═══════════════ -->
+  <div class="pagination" id="pagination"></div>
+ 
+  <!-- ═══════════════ MODAL ═══════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-inner" id="modalInner">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ═══════════════ TOAST ═══════════════ -->
+  <div class="toast" id="toast"></div>
+ 
+  <script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+ 
